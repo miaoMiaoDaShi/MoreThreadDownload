@@ -14,7 +14,7 @@ import java.io.RandomAccessFile;
 
 public class FileUtils {
     //创建随机访问文件
-    public static RandomAccessFile createFile(File file){
+    public static RandomAccessFile createRandomAccessFile(File file){
         try {
            return new RandomAccessFile(file,"rwd");
         } catch (FileNotFoundException e) {
@@ -45,5 +45,12 @@ public class FileUtils {
         }
 
         return false;
+    }
+
+    public static void removeFile(String path,String fileName) {
+        File file = new File(path,fileName);
+        if(file.exists()){
+            file.delete();
+        }
     }
 }

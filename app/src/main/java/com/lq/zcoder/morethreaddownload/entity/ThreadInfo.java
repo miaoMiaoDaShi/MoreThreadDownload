@@ -8,12 +8,17 @@ package com.lq.zcoder.morethreaddownload.entity;
  */
 
 public class ThreadInfo {
+    //数据库键位
+    public final static String KEY_URL = "key_url";
+    public final static String KEY_STARTPOSITION = "key_startPosition";
+    public final static String KEY_ENDPOSITION = "key_endPosition";
+    public final static String KEY_DONEPOSITION = "key_endPosition";
+
     private int id;
     private String url;
     private long startPosition;
     private long endPosition;
     private long donePosition;
-    private long blockSize;
 
     public int getId() {
         return id;
@@ -23,13 +28,6 @@ public class ThreadInfo {
         this.id = id;
     }
 
-    public long getBlockSize() {
-        return blockSize;
-    }
-
-    public void setBlockSize(long blockSize) {
-        this.blockSize = blockSize;
-    }
 
     public String getUrl() {
         return url;
@@ -70,7 +68,6 @@ public class ThreadInfo {
                 ", startPosition=" + startPosition +
                 ", endPosition=" + endPosition +
                 ", donePosition=" + donePosition +
-                ", blockSize=" + blockSize +
                 '}';
     }
 }

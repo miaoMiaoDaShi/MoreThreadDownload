@@ -8,6 +8,15 @@ package com.lq.zcoder.morethreaddownload.entity;
  */
 
 public class FileInfo {
+    //数据库键位
+    public final static String KEY_FILENAME = "filename";
+    public final static String KEY_URL = "key_url";
+    public final static String KEY_SUPPORTRANGE = "key_supportRange";
+    public final static String KEY_SIZE = "key_size";
+    public final static String KEY_PATH = "key_path";
+    public final static String KEY_THREADCOUNT = "key_threadcount";
+
+
     private String FileName;
     private String url;
     private Boolean supportRange;

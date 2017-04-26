@@ -44,14 +44,14 @@ public class ThreadTask extends AsyncTask<Downloader, Integer, Integer> {
             URL url = new URL(mThreadInfo.getUrl());
             connection = (HttpURLConnection) url.openConnection();
             connection.setConnectTimeout(5000);
-            connection.setRequestProperty("Range", "bytes=" + mThreadInfo.getStartPosition() + "-");
+            connection.setRequestProperty("Range", "bytes=" + mThreadInfo.getStartPosition() + "-"+mThreadInfo.getEndPosition());
             if (connection.getResponseCode() == HttpURLConnection.HTTP_PARTIAL) {
                 Log.e(TAG, "doInBackground: 请求成功" );
                 is = connection.getInputStream();
                 byte bytes[] = new byte[1024];
                 doneLenght = 0;
                 long readLenght;
-                while (!isCancelled()&&doneLenght < mThreadInfo.getBlockSize() && (readLenght = is.read(bytes)) != -1) {
+                while (!isCancelled()&&doneLenght < mThreadInfo.getEndPosition() && (readLenght = is.read(bytes)) != -1) {
                     mRandomAccessFile.write(bytes, 0, (int) readLenght);
                     doneLenght += readLenght;
                     mThreadInfo.setDonePosition(doneLenght);

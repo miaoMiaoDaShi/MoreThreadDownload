@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.lq.zcoder.morethreaddownload.exception.DownloadException;
 import com.lq.zcoder.morethreaddownload.listener.DownloadListener;
-import com.lq.zcoder.morethreaddownload.utils.FileUtils;
 
 import java.io.File;
 
@@ -14,7 +13,7 @@ import java.io.File;
  * Created by Zcoder
  * Email : 1340751953@qq.com
  * Time :  2017/4/25
- * Description :
+ * Description : 下载器的管理类,负责暂停.开始下载任务
  */
 
 public class DownloadManager implements DownloadListener {
@@ -98,7 +97,6 @@ public class DownloadManager implements DownloadListener {
 
     //开始下载
     public void start() {
-
         mDownloadTask = new DownloadTask(mDownloader);
         mDownloadTask.execute();
     }
