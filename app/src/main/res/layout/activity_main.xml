@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lq.zcoder.morethreaddownload.MainActivity">
+
+    <EditText
+        android:id="@+id/txt_link"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:hint="请键入下载链接"
+        android:paddingLeft="10dp"
+        android:text="http://xxpbox.cn/app/music.mp3"
+        android:textColor="#f38181"
+        android:textColorHint="#cac5c5"
+        android:textSize="23sp"
+        tools:ignore="RtlSymmetry" />
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.lq.zcoder.morethreaddownload.view.CircleProgressbar
+        android:id="@+id/cpb"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"/>
+    <View
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_download"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="下载"
+        android:textColor="@color/colorAccent"
+        android:textSize="50sp"/>
+
+</LinearLayout>

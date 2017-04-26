@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="circle_progress_bar">
+        <!--完成的颜色-->
+        <attr name="color_done" format="color"/>
+        <!--未完成的颜色-->
+        <attr name="color_undone" format="color"/>
+        <!--是否以环形显示-->
+        <attr name="show_style">
+            <enum name="STROKE" value="0"></enum>
+            <enum name="FILL" value="1"></enum>
+        </attr>
+        <!--是否显示百分百进度文字-->
+        <attr name="show_text" format="boolean"/>
+        <!--文字的颜色-->
+        <attr name="text_color" format="color"/>
+        <!--进度最大值-->
+        <attr name="max_progress" format="integer"/>
+        <!--圆环的宽度-->
+        <attr name="ring_width" format="integer"/>
+    </declare-styleable>
+</resources>
